@@ -127,6 +127,13 @@ function Home() {
                 >
                     📒 View All Notes
                 </button>
+
+                <button 
+  onClick={() => navigate("/ai")}
+  className="bg-purple-600 text-white p-3 rounded"
+>
+  Generate Text with AI ✨
+</button> 
             </div>
         </div>
 

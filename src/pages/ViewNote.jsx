@@ -12,6 +12,7 @@ function ViewNote() {
 
   const [aiOutput, setAiOutput] = useState("");
   const [aiLoading, setAiLoading] = useState(false);
+  
 
   useEffect(() => {
     async function fetchNote() {
@@ -32,8 +33,7 @@ function ViewNote() {
     if (!note) return;
 
     setAiLoading(true);
-    const prompt = `Summarize this note in simple words: ${note.content}`;
-    const aiText = await generateAIText(prompt);
+    const aiText = await generateAIText(note.content);
     setAiOutput(aiText);
     setAiLoading(false);
   }
@@ -71,6 +71,7 @@ function ViewNote() {
         onClick={() => navigate(-1)}
         style={{
           marginBottom: "20px",
+          marginRight: "10px",
           padding: "8px 14px",
           borderRadius: "6px",
           background: "#2a2a2a",
@@ -81,6 +82,20 @@ function ViewNote() {
       >
         ← Back
       </button>
+
+ <button
+    onClick={() => navigate("/")}
+    style={{
+      padding: "8px 14px",
+      borderRadius: "8px",
+      border: "none",
+      background: "#2196f3",
+      color: "white",
+      cursor: "pointer",
+    }}
+  >
+    🏠 Go To Home
+  </button>
 
       <h1 style={{ marginBottom: "20px" }}>{note.title}</h1>
 

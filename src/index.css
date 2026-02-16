@@ -11,3 +11,77 @@ body {
 #root {
   width: 100%;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+}
+
+.ai-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ai-card {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.ai-card h1 {
+  margin-bottom: 20px;
+}
+
+.ai-card textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.ai-card textarea:focus {
+  outline: 2px solid #7c3aed;
+}
+
+.ai-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #7c3aed;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ai-card button:hover {
+  background-color: #6d28d9;
+}
+
+.ai-response {
+  margin-top: 20px;
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.ai-response h3 {
+  margin-top: 0;
+}
+
+.ai-response p {
+  white-space: pre-wrap;
+}

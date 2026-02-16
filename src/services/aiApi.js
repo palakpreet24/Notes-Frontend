@@ -1,10 +1,10 @@
-// src/services/aiApi.js
-export async function generateAIText(prompt) {
+// // src/services/aiApi.js
+export async function generateAIText(content) {
   try {
-    const res = await fetch("http://localhost:5000/api/generate", { // backend endpoint
+    const res = await fetch("http://localhost:5000/api/ai/summary", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
+      body: JSON.stringify({ note: content }), // send only text
     });
 
     if (!res.ok) {
