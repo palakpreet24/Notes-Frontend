@@ -4,7 +4,7 @@ import axios from "axios";
 //   baseURL: "http://localhost:5000/api",
 // });
 const API = axios.create({
- baseURL: "https://notes-backend-julo.onrender.com/api"
+ baseURL: "https://notes-backend-2-laq4.onrender.com/api",
 });
 
 
